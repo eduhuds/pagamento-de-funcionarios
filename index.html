@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema - Folha de Pagamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Sistema de Folha de Pagamento</h1>
+        <a href="cadastro.html" style="color: white; font-size: 0.9em;">(Sair)</a>
+    </header>
+    <main>
+        <section class="formulario-secao">
+            <h2>Cálculo de Salário</h2>
+            <form id="form-calculo" class="formulario-pagamento">
+                <fieldset>
+                    <legend>Lançamento Salarial</legend>
+                    <div class="campo-grupo">
+                        <label for="salario-base">Salário Base (R$):</label>
+                        <input type="number" id="salario-base" name="salario-base" required min="1000" step="0.01" value="1500.00">
+                    </div>
+                    <div class="campo-grupo">
+                        <label for="beneficios">Benefícios (R$):</label>
+                        <input type="number" id="beneficios" name="beneficios" value="100.00" min="0" step="0.01">
+                    </div>
+                    <div class="campo-grupo">
+                        <label for="descontos">Descontos/Impostos (R$):</label>
+                        <input type="number" id="descontos" name="descontos" value="150.00" min="0" step="0.01">
+                    </div>
+                </fieldset>
+                <div id="resultado-calculo" class="resultado">
+                    <h3>Salário Líquido Estimado:</h3>
+                    <p id="salario-liquido-output">R$ 1450,00</p>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer><p>&copy; 2025 Sistema de Folha de Pagamento</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>
