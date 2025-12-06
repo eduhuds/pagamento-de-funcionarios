@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folha de Pagamento - Processamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Processamento de Folha de Pagamento</h1>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Dados do Funcionário e Variáveis do Mês</h2>
+            <form id="payrollForm">
+                <div class="input-group">
+                    <label for="nome">Nome do Funcionário:</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="input-group">
+                    <label for="salarioBruto">Salário Base (R$):</label>
+                    <input type="number" id="salarioBruto" step="0.01" min="0" required>
+                </div>
+                <div class="input-group">
+                    <label for="horasExtras">Horas Extras 50% (h):</label>
+                    <input type="number" id="horasExtras" min="0" value="0">
+                </div>
+                <div class="input-group">
+                    <label for="faltas">Faltas/Atrasos (R$):</label>
+                    <input type="number" id="faltas" step="0.01" min="0" value="0">
+                </div>
+                <div class="input-group">
+                    <label for="beneficios">Desconto de Benefícios (R$):</label>
+                    <input type="number" id="beneficios" step="0.01" min="0" value="250.00">
+                </div>
+                
+                <button type="submit">Processar Folha</button>
+            </form>
+        </section>
+
+        <section class="result-container" id="resultadoArea" style="display:none;">
+            <h2>Contracheque (Simulado)</h2>
+            <p><strong>Funcionário:</strong> <span id="outNome"></span></p>
+            <div id="holeriteDetalhes">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto de Front-end - Controle de Pagamento</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
